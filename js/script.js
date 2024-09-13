@@ -47,7 +47,7 @@ btn.onclick = function() {
     const randomQuote = qoute.quotes[randomIndex];
     qouteText.textContent = randomQuote.quote;
     authorText.textContent = randomQuote.author;
-    console.log(randomQuote);
+    console.log(randomQuote); // for testing and debugging
 };
 
 
