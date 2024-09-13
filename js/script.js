@@ -35,12 +35,19 @@ const btn = document.getElementById('generate-btn');
 const qouteText = document.getElementById('qoute-text');
 const authorText = document.getElementById('author-text');
 
-btn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * qoute.quotes.length);
+let lastIndex = -1;
+
+btn.onclick = function() {
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * qoute.quotes.length);
+    } while (randomIndex === lastIndex);
+
+    lastIndex = randomIndex;
     const randomQuote = qoute.quotes[randomIndex];
     qouteText.textContent = randomQuote.quote;
     authorText.textContent = randomQuote.author;
     console.log(randomQuote);
-});
+};
 
 
