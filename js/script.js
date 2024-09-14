@@ -58,12 +58,13 @@ const qoute = {
         },
     ]
 };
-
+// declare variables
 const qouteText = document.getElementById('qoute-text');
 const authorText = document.getElementById('author-text');
 
 let lastIndex = -1;
 
+// function to generate a random quote
 function generateQuote() {
     let randomIndex;
     do {
